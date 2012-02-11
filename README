@@ -1,10 +1,7 @@
 This is a standard web shop site, built from scratch for customisibility and as a learning exercise
 
-Once deployed, it will be hosted at www.ludditegames.com selling Yu-Gi-Oh cards and accessories,
-although there is unlikely to be anything Yu-Gi-Oh or trading card specific in its implementation.
+Once deployed, it will be hosted at www.ludditegames.com selling Yu-Gi-Oh cards and accessories, although there is unlikely to be anything Yu-Gi-Oh or trading card specific in its implementation.
 
-It will include full eCommerce facilities, probably with ActiveMerchant support, as well as integration
-with Paypal (and possibly Google checkout, Amazon checkout ...)
+It will include full eCommerce facilities, probably with ActiveMerchant support, as well as integration with Paypal (and possibly Google checkout, Amazon checkout ...)
 
-This is primarily a real business site selling actual product. However, I will take the opportunity to
-learn good RoR practice and expose myself to learning opportunities through this project.
+This is primarily a real business site selling actual product. However, I will take the opportunity to learn good RoR practice and expose myself to learning opportunities through this project.
