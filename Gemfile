@@ -29,7 +29,10 @@ group :test do
   gem "guard-rspec"        # automatically run tests
   gem 'win32console'       # for colours in windows terminal
   gem 'rb-notifu'          # for Windows system tray notifications4
-  gem 'rb-fchange'         # it was listed in railstutorial
+  #gem 'rb-fchange'         # it was listed in railstutorial
+  gem 'guard-spork'        # allow spork to speed up guard
+  gem "spork"              # speed up tests (by only running rails once)
+  gem 'win32-process'      # implements fork so spork can run
 end
 
 gem 'redcarpet' # support for Markdown

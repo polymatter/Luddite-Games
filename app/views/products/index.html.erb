@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Id</th>
     <th>Name</th>
     <th>Description</th>
     <th>Image</th>
@@ -9,17 +10,16 @@
     <th>Price</th>
     <th></th>
     <th></th>
-    <th></th>
   </tr>
 
 <% @products.each do |product| %>
   <tr>
-    <td><%= product.name %></td>
-    <td><%= product.description %></td>
+    <td><%= product.id %></td>
+    <td><%= link_to product.name, product_path(product) %></td>
+    <td><%= markdown product.description %></td>
     <td><%= product.image %></td>
     <td><%= product.size %></td>
     <td><%= product.price %></td>
-    <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
   </tr>

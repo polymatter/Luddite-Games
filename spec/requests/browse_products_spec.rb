@@ -1,24 +1,31 @@
 require 'spec_helper'
 
 describe "browse products" do
-  # allows every test to have access to a default factory-produced product
-  let(:product) { Factory(:product) }
+  before(:each) do
+    @products = FactoryGirl.create_list(:product, 1)
+  end
 
-  it "shows products that we are selling on the home page" do
+  it "has a price list to all products we sell on the home page" do
     visit root_url
-	page.should have_content(product.name)
-	page.should have_content(product.price)
+	@products.each do |product|
+	  page.should have_content(product.name)
+	  page.should have_content(product.price)
+	end
   end
   
-  it "clicking on a product name, displays the page for that product" do
-    visit root_url
-	click_link(product.name)
-	current_path.should == product_path(product)
+  it "displays the product page when you click on the product name" do
+	@products.each do |product|
+	  visit root_url
+	  click_link(product.name)
+	  current_path.should == product_path(product)
+	end
   end
   
-  it "renders markdown descriptions" do
-    visit product_path(product)
-	page.should have_selector('li', :text => "test")
-	page.should have_selector('em', :text => "test")
+  it "renders markdown descriptions on all product pages" do
+    @products.each do |product|
+      visit product_path(product)
+	  page.should have_selector('li', :text => "test")
+	  page.should have_selector('strong', :text => "test")
+    end
   end
 end

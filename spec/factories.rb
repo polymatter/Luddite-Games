@@ -1,15 +1,10 @@
 # Factories for use with Factory Girl where writing tests
 # eg. in a spec say user = Factory(:user)
 
-# Factory.define :user do |f|
-#   f.sequence(:email) { |n| "foo#{n}@example.com" }
-#   f.password "secret"
-# end
-
 Factory.define :product do |p|
-  p.name          "Test Product of super-awesomeness"
-  p.description   "This is a description **test markup emphasis** \n-test markup list item \n-interesting things\nand stuff"
+  p.sequence(:name) { |n| "Test Product #{n}" }
+  p.description   "This is a description **test markup emphasis** \n\n- test markup list item \n\n- interesting things\n\nand stuff"
   p.image         "test_product_img.png"
-  p.size          :packet
-  p.price         2.99
+  p.sequence(:size)  { |n| (n < 3 ? :small : (n < 7 ? :medium : :large)) }
+  p.sequence(:price) { |n| 2.99 + (n * 0.25) }
 end

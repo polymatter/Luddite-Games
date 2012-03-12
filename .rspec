@@ -1,1 +1,3 @@
---colour
+--color
+--fail-fast
+--format nested
