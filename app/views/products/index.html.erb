@@ -1,29 +1,24 @@
-<h1>Listing products</h1>
+<h1>Product List</h1>
 
 <table class="table table-striped" >
-  <tr>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Image</th>
-    <th>Size</th>
-    <th>Price</th>
-    <th></th>
-    <th></th>
-  </tr>
 
 <% @products.each do |product| %>
   <tr>
-    <td><%= product.id %></td>
-    <td><%= link_to product.name, product_path(product) %></td>
-    <td><%= markdown product.description %></td>
-    <td><%= product.image %></td>
-    <td><%= product.size %></td>
-    <td><%= product.price %></td>
-    <td><%= link_to 'Edit', edit_product_path(product) %></td>
-    <td><%= link_to 'Destroy', product, confirm: 'Are you sure?', method: :delete %></td>
+    <td><img src='<%= image_path("#{product.image}") %>'/></td>
+    <td>
+	  <h3><%= link_to product.name, product_path(product) %></h3>
+	  <p><%= markdown product.description %></p>
+	  <p>Gabbi's price: <%= product.price %></p>
+	  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="WRBHH42B7BTAL">
+        <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal: The safer, easier way to pay online.">
+      </form>
   </tr>
 <% end %>
+  <tr>
+    <td>Test the table thing</td>
+  </tr>
 </table>
 
 <br />
