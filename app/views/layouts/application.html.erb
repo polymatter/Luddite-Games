@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Ludditegames</title>
   <%= stylesheet_link_tag    "bootstrap" %>
@@ -13,33 +13,61 @@
   <div class="navbar-inner">
     <div class="container">
       <a class="brand" href="#">Gabbi's Gameroom</a>
-	  <ul class="nav">
-	  <li class="active">
-		<a href="#">Home</a>
-	  </li>
-	  <li><a href="#">Structure Decks</a></li>
-	  <li><a href="#">Accessorises</a></li>
-</ul>
+      <ul class="nav">
+        <li class="active">
+          <a href="#">Home</a>
+        </li>
+        <li><a href="#">Structure Decks</a></li>
+        <li><a href="#">Accessorises</a></li>
+      </ul>
     </div>
   </div>
 </div>
 
 <div class="container-fluid">
+  <div class="hero-unit">
+    <h1>Yu-Gi-Oh Cards Here!</h1>
+  </div>
+
+  <hr class="soften"/>
+  
   <div class="row-fluid">
-    <div class="span10">
+    <div class="span9">
       <%= yield %>
     </div>
-    <div class="span2">
-      <h2>About Us</h2>
-	  Some stuff goes into here and stuff i guess and it just like
-	  really really like
-	  really
-	  ...
-	  ...
-	  ...
-	  FUS ROH DAH!
+    <div class="span3">
+      <h2>About Me</h2>
+      <p>I'm Gabbi and I bring you Yu-Gi-Oh cards at near-cost prices!</p>
+      <p>Why? Am I totally insane?</p>
+      <p>Yes. Yes I am.</p>
+      <blockquote>
+        <p>You're nuts</p>
+        <small>inconcequential person</small>
+      </blockquote>
+      <p>FUS ROH DAH!</p>
+      <blockquote>
+        <p>Wow! This is amazing!</p>
+        <small>person</small>
+      </blockquote>
+      <blockquote>
+        <p>Gabbi's Gameroom is amazing. Great service, super fast delivery. And I totally didn't get paid for saying this</p>
+        <small>person who was not paid anything for this quote</small>
+      </blockquote>
+      <p>PS. I am always on the lookout for better supplier prices. I don't have that much volume yet
+      but if you know anyone, give me a shout at ludditegames@gmail.com</p>
     </div>
   </div>
+  
+  <hr class="soften"/>
+
+  <footer class="footer">
+    <p>Please be aware I only sell to addresses in the UK. This makes it simpler for me in terms of official 
+       documents, taxes and legality. This may change if many people email me at ludditegames@gmail.com</p>
+    <p>Gabbi's Gameroom is a trading name of Gabbi Ltd. Registered Company No 07909878, VAT number 129 047 026.
+       Registered office: 79 Sherrards Way, Barnet, Herts. EN5 2BP</p>
+    <p>I fully comply to UK and EU law</p>
+</footer>
+  
 </div>
 
 </body>
