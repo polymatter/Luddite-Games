@@ -2,13 +2,45 @@
 <html>
 <head>
   <title>Ludditegames</title>
+  <%= stylesheet_link_tag    "bootstrap" %>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="brand" href="#">Gabbi's Gameroom</a>
+	  <ul class="nav">
+	  <li class="active">
+		<a href="#">Home</a>
+	  </li>
+	  <li><a href="#">Structure Decks</a></li>
+	  <li><a href="#">Accessorises</a></li>
+</ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span10">
+      <%= yield %>
+    </div>
+    <div class="span2">
+      <h2>About Us</h2>
+	  Some stuff goes into here and stuff i guess and it just like
+	  really really like
+	  really
+	  ...
+	  ...
+	  ...
+	  FUS ROH DAH!
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
