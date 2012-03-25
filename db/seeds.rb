@@ -21,15 +21,7 @@ Includes 40 cards including: 2 Ultra Rares, 1 Super Rare and 37 Commons
 [Wikia page](http://yugioh.wikia.com/wiki/Structure_Deck:_Dragons_Collide) 				
 				 ",
 				 :image => "Dragons Collide.jpg", 
-				 :size => :large_packet,
-                 :paypal_code => "
-<form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-<input type='hidden' name='cmd' value='_s-xclick'>
-<input type='hidden' name='hosted_button_id' value='DM25ZG3KLSG6Q'>
-<input type='image' src='https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif' border='0' name='submit' alt='Add to Shopping Cart'>
-<img alt='' border='0' src='https://www.paypalobjects.com/en_GB/i/scr/pixel.gif' width='1' height='1'>
-</form>
-                 ",				 
+				 :size => :large_packet,				 
 				 :price => 22.50})
 				
 Product.create({:name => "Twilight",
@@ -47,15 +39,6 @@ Includes:
 				
 [Twilight Wikia page](http://yugioh.wikia.com/wiki/Twilight_Edition)				
                  ",
-				 :paypal_code => "
-<form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-<input type='hidden' name='cmd' value='_s-xclick'>
-<input type='hidden' name='hosted_button_id' value='8LHUEK8DHKTF8'>
-<input type='image' src='https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif' border='0' name='submit' alt='Add to Shopping Cart'>
-<img alt='' border='0' src='https://www.paypalobjects.com/en_GB/i/scr/pixel.gif' width='1' height='1'>
-</form>
-				 
-				 ",
 				 :image => "Twilight.jpg",
 				 :size => :packet,
 				 :price => 8.50})
@@ -70,15 +53,6 @@ Order of Chaos is a great base booster introduces the Armor Ninja, Gagaga, Gogog
 
 [Order of Chaos Wikia page](http://yugioh.wikia.com/wiki/Order_of_Chaos)
                  ",
-				 :paypal_code => "
-<form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-<input type='hidden' name='cmd' value='_s-xclick'>
-<input type='hidden' name='hosted_button_id' value='5RG5EZTW9XGV2'>
-<input type='image' src='https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif' border='0' name='submit' alt='Add to Shopping Cart'>
-<img alt='' border='0' src='https://www.paypalobjects.com/en_GB/i/scr/pixel.gif' width='1' height='1'>
-</form>
-				 
-				 ",
 				 :image => "Order of Chaos.jpg",
 				 :size => :large_packet,
 				 :price => 57.00})
@@ -99,14 +73,6 @@ Contains 9 cards per pack.
 			  
 [Photon Shockwave Wikia page](http://yugioh.wikia.com/wiki/Photon_Shockwave)
 			     ",
-				 :paypal_code => "
-<form target='paypal' action='https://www.paypal.com/cgi-bin/webscr' method='post'>
-<input type='hidden' name='cmd' value='_s-xclick'>
-<input type='hidden' name='hosted_button_id' value='N8Q3SJFV25ZTL'>
-<input type='image' src='https://www.paypalobjects.com/en_GB/i/btn/btn_cart_LG.gif' border='0' name='submit' alt='Add to Shopping Cart'>
-<img alt='' border='0' src='https://www.paypalobjects.com/en_GB/i/scr/pixel.gif' width='1' height='1'>
-</form>				 
-				 ",
 				 :image => "Photon Shockwave.jpg",
 				 :size => :letter,
 				 :price => 3.00})
