@@ -1,17 +1,22 @@
 <h1>Product List</h1>
 
-<table class="table table-striped" >
-
+<ul class="thumbnails">
 <% @products.each do |product| %>
-  <tr>
-    <td><img src='<%= image_path("#{product.image}") %>'/></td>
-    <td>
+  <li class="span3">
+    <div class="thumbnail">
+      <img src='<%= image_path("#{product.image}") %>'/>
 	  <h3><%= link_to product.name, product_path(product) %></h3>
-	  <p><%= markdown product.description %></p>
 	  <p>Gabbi's price: <%= product.price %></p>
-  </tr>
+	  <p>
+	  <form>
+	    <input type="submit" name="submit" class="btn btn-primary" value="Add to cart"/>
+	  </form>
+	  
+	  </p>
+    </div>
+  </li>
 <% end %>
-</table>
+</ul>
 
 <br />
 
