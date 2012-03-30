@@ -1,17 +1,17 @@
 development:
-   paypal_email: luddit_1332703378_biz@gmail.com
-   paypal_secret: 
-   paypal_cert_id: M6UDH3QBXP4JU
-   paypal_url: https://www.sandbox.paypal.com/cgi-bin/webscr
-   
+  paypal_email: luddit_1332703378_biz@gmail.com
+  paypal_secret: bananameritocracy
+  paypal_cert_id: M6UDH3QBXP4JU
+  paypal_url: https://www.sandbox.paypal.com/cgi-bin/webscr
+
 test:
-   paypal_email: test@example.com
-   paypal_secret: testsecret
-   paypal_cert_id: X1234567890
-   paypal_url: testpaypalurl
-   
+  paypal_email: luddit_1332703378_biz@gmail.com
+  paypal_secret: bananameritocracy
+  paypal_cert_id: M6UDH3QBXP4JU
+  paypal_url: https://www.sandbox.paypal.com/cgi-bin/webscr
+
 production:
-   paypal_email: ludditegames@gmail.com
-   paypal_secret: A312k6HJpa03tl2cJ6h
-   paypal_cert_id: notyet
-   paypal_url: https://www.paypal.com/cgi-bin/webscr
+  paypal_email: luddit_1332703378_biz@gmail.com
+  paypal_secret: bananameritocracy
+  paypal_cert_id: M6UDH3QBXP4JU
+  paypal_url: https://www.sandbox.paypal.com/cgi-bin/webscr
