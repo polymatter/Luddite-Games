@@ -86,6 +86,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
+    nifty-generators (0.4.6)
     nokogiri (1.5.0-x86-mingw32)
     pg (0.11.0-x86-mingw32)
     polyglot (0.3.3)
@@ -180,12 +181,12 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   capybara
   coffee-rails (~> 3.1.1)
-  execjs
   factory_girl_rails
   guard-rspec
   guard-spork
   heroku
   jquery-rails
+  nifty-generators
   pg (= 0.11)
   rails (= 3.1.1)
   rb-notifu

@@ -35,7 +35,8 @@ group :test do
 end
 
 group :development do
-  gem 'execjs'     # to use native Windows JScript, to avoid requirement for therubyracer gem
+  gem "nifty-generators"
+  #gem 'execjs'     # to use native Windows JScript, to avoid requirement for therubyracer gem
 end
 
 gem 'redcarpet' # support for Markdown

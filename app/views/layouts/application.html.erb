@@ -35,10 +35,10 @@
       <%= yield %>
     </div>
     <div class="span3">
-	  <%= form_tag (APP_CONFIG[:paypal_url]) do %>
+	  <%= form_tag APP_CONFIG[:paypal_url] do %>
         <%= hidden_field_tag :cmd, "_s-xclick" %>
-        <%= hidden_field_tag :encrypted,Product.find(1).paypal_encrypted("http://www.google.com","http://www.nominomino.com") %>
-        <%= submit_tag "Pay Now", :class => "btn btn-primary" %>
+        <%= hidden_field_tag :encrypted, Cart.new.paypal_encrypted("http://www.google.com","") %>
+        <%= submit_tag "Checkout", :class => "btn btn-primary" %>
       <% end %>
 	
       <h2>About Me</h2>
