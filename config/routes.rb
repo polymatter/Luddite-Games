@@ -1,6 +1,7 @@
 Ludditegames::Application.routes.draw do
   resources :products
-
+  resources :cartitems
+  
   root :to => 'products#index'
   
   # The priority is based upon order of creation:

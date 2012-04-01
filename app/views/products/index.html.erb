@@ -4,15 +4,14 @@
 <% @products.each do |product| %>
   <li class="span3">
     <div class="thumbnail">
-      <img src='<%= image_path("#{product.image}") %>'/>
+      <%= image_tag("#{product.image}") %>
 	  <h3><%= link_to product.name, product_path(product) %></h3>
-	  <p>Gabbi's price: <%= product.price %></p>
-	  <p>
-	  <form>
-	    <input type="submit" name="submit" class="btn btn-primary" value="Add to cart"/>
-	  </form>
-	  
-	  </p>
+	  <p>Gabbi's price: <%= number_to_currency(product.price, :unit => "£") %></p>
+	  <%= form_tag cartitems_path(:product_id => product), :method => :post do %>
+	    <%= hidden_field_tag(:product_id, product.id) %>
+		<%= hidden_field_tag(:quantity, 1) %>
+	    <input id='<%= "add_#{product.id}" %>' type="submit" name="submit" class="btn btn-primary" value="Add to cart"/>
+	  <% end %>
     </div>
   </li>
 <% end %>

@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
   # GET /products
   def index
     @products = Product.all
-
+    @current_cart = current_cart
+	
 	# return index.html.erb
     respond_to { |f| f.html }
   end
