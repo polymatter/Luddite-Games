@@ -6,7 +6,7 @@ class CartitemsController < ApplicationController
 	quantity ||= 1
 	
 	cartitem = current_cart.cartitem_for(product)	
-	cartitem.add(1)
+	cartitem.add(quantity)
 	  
 	redirect_to root_url
   end

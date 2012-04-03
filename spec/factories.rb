@@ -22,13 +22,13 @@ FactoryGirl.define do
     factory :cart_with_items do
   
       ignore do
-        product_count [1, 1, 2, 3]
+        quantity_of_each_product [1, 1, 2, 3]
 		products FactoryGirl.create_list(:product, 4)
       end
   
       after_create do |cart, evaluator|
-        evaluator.product_count.each_with_index do |quantity, index|
-		  product = evaluator.products[index]
+        evaluator.quantity_of_each_product.each_with_index do |quantity, product_index|
+		  product = evaluator.products[product_index]
 	      FactoryGirl.create(:cartitem, :quantity => quantity, :product => product, :cart => cart)
 	    end
       end

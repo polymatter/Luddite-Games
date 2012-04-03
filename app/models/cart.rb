@@ -1,5 +1,5 @@
 class Cart < ActiveRecord::Base
-  has_many :cartitems
+  has_many :cartitems, :order => "id DESC"
   has_many :products, :through => :cartitems
   
   attr_accessible :cartitems, :products
@@ -31,13 +31,14 @@ class Cart < ActiveRecord::Base
 	}
 	
 	# values for each item in shopping cart
-	test_product = Product.find(1)
-	values.merge!({
-	  "amount_1" => test_product.price,
-	  "item_name_1" => test_product.name,
-	  "item_number_1" => test_product.id,
-	  "quantity_1" => 3
-	})
+	cartitems.each_with_index do |item, index|
+	  values.merge!({
+	    "amount_#{index + 1}" => item.product.price,
+	    "item_name_#{index + 1}" => item.product.name,
+	    "item_number_#{index + 1}" => item.product.id,
+	    "quantity_#{index + 1}" => item.quantity
+	  })
+	end
 	
 	encrypt_for_paypal(values)
   end

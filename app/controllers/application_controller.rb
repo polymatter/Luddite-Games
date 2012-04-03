@@ -3,12 +3,12 @@ class ApplicationController < ActionController::Base
   
   # accesses the shopping cart using a session variable
   def current_cart
-    if session[:cart_id]
-	  @current_cart ||= Cart.find(session[:cart_id])
-	else
-	  @current_cart = Cart.create!
+    @current_cart = session[:cart_id] ? Cart.find(session[:cart_id]) : Cart.create!
+	
+	if session[:cart_id] != @current_cart.id
 	  session[:cart_id] = @current_cart.id
 	end
+
 	@current_cart
   end
   

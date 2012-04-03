@@ -7,9 +7,9 @@
       <%= image_tag("#{product.image}") %>
 	  <h3><%= link_to product.name, product_path(product) %></h3>
 	  <p>Gabbi's price: <%= number_to_currency(product.price, :unit => "£") %></p>
-	  <%= form_tag cartitems_path(:product_id => product), :method => :post do %>
-	    <%= hidden_field_tag(:product_id, product.id) %>
+	  <%= form_tag cartitems_path, :method => :post do %>
 		<%= hidden_field_tag(:quantity, 1) %>
+		<%= hidden_field_tag(:product_id, product.id) %>
 	    <input id='<%= "add_#{product.id}" %>' type="submit" name="submit" class="btn btn-primary" value="Add to cart"/>
 	  <% end %>
     </div>

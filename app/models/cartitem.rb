@@ -9,18 +9,12 @@ class Cartitem < ActiveRecord::Base
   
   def init_quantity
     @quantity = 0
-   # self.update_attributes({:quantity => 0})
-  end
-  
-  def init_cart(value_hash)
-    self.update_attrbitues(value_hash)
+	#self.update_attributes({:quantity => 0 })
   end
   
   def add(more)
-    @quantity = @quantity + more
-	@been_added ||= true
-	#more ||= 1
-    #self.update_attributes({:quantity => self.quantity + more})
+    @been_added ||= true
+	self.update_attributes({:quantity => self.quantity.to_i + more.to_i })
   end
   
   def been_added
